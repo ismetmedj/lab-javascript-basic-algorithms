@@ -1,3 +1,4 @@
+
 // Iteration 1: Names and Input
  const hacker1 = "Ismet";
  console.log(`The driver's name is ${hacker1}`);
@@ -47,3 +48,51 @@ if (hacker1 > hacker2) {
 } else {
     console.log("What?! You both have the same name?");
 }
+
+
+// Bonus Time 1!
+
+const longText =`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu nulla a elit pretium faucibus tincidunt in ante. Proin fermentum, felis quis aliquet ornare, magna orci scelerisque dui, eget venenatis neque elit nec ligula. Pellentesque dapibus accumsan augue, sit amet luctus enim lacinia sed. Ut eget leo venenatis, laoreet augue in, porta lectus. Sed lorem tortor, imperdiet at hendrerit in, ultrices eget ante. Vestibulum quis lobortis dolor. Integer volutpat consequat risus, sit amet dapibus justo iaculis quis.
+
+In finibus, ligula et pulvinar lobortis, ipsum velit laoreet neque, facilisis dictum nisi nulla blandit diam. Quisque gravida quam id consectetur sodales. Cras finibus purus risus, vitae iaculis nibh cursus vitae. Duis quis enim semper, tristique tortor a, luctus felis. Nullam ac diam laoreet, hendrerit nunc eu, tincidunt velit. Donec eget dignissim massa. Fusce ullamcorper efficitur nulla vitae suscipit. Vivamus feugiat rhoncus diam, quis ornare enim feugiat quis. Suspendisse rhoncus quam ac est interdum pulvinar. Duis fringilla sodales libero eu tempus.
+
+Sed ornare, urna non fermentum fermentum, nulla urna varius ipsum, non fermentum turpis tortor eu felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent in facilisis est. Donec sed pellentesque justo. Cras massa libero, scelerisque vitae nulla eget, faucibus convallis mi. Cras tellus nunc, rutrum ac diam sed, tristique ultrices quam. Etiam sed erat rhoncus, aliquam lacus id, eleifend leo. Donec posuere, ex rhoncus pharetra rutrum, ligula nunc tempus est, a blandit purus neque ac elit.`;
+
+let numberOfSpace=0;
+let numberOfEnd=0;
+
+for ( let i = 0 ; i < longText.length ; i++){
+   // console.log(i);
+    if (longText[i] === ` `){
+        //console.log(`space found`);
+        numberOfSpace += 1;
+    }
+}
+
+console.log(`number of space ${numberOfSpace}`);
+
+for ( let i = 0 ; i < longText.length ; i++){
+        // console.log(i);
+         if (longText[i] === `\n`){
+             //console.log(`space found`);
+             numberOfEnd += 1;
+         }
+     }
+    
+     console.log(`numbers of back slash ${numberOfEnd}`);
+
+
+
+
+let numberOfEt=0;
+
+
+for ( let i = 0 ; i < longText.length ; i++){
+    //console.log(i);
+    if (longText[i] === " " && longText[i+1] === "e" && longText[i+2] === "t" && longText[i+3] === " "){
+        //console.log(`space found`);
+        numberOfEt += 1;
+    }
+}
+
+console.log(`numbers of 'et' ${numberOfEt}`);
